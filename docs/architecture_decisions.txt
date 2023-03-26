@@ -1,0 +1,8 @@
+For this project, I use three types of message passing: 
+- gRPC, 
+- Message Queues (implemented via Kafka), 
+- and REST API. 
+
+1. The workflow of the application will inget location data into Kafka, this will enhance performance, facilitate real-time processing, and support easy integration. 
+2. location data will be passed using gRPC because it is capable of handling large data ingestion and high throughput from mobile devices. 
+3. Next, the Location service will act as a consumer, retrieving data from Kafka and storing it in PostgreSQL. Finally, for communication with the frontend, REST API will be used since it is easy to use and has high throughput performance.
